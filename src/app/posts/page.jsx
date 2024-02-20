@@ -8,11 +8,31 @@ import PrimaryButton from "@/components/PrimaryButton";
 import InputError from "@/components/InputError";
 import TextareaInput from "@/components/TextareaInput";
 import { useFormik } from "formik";
-import { useMutation } from "@tanstack/react-query";
-import { axiosInstance } from "@/libs/axios";
+import { useCreatePost } from "@/features/post/useCreatePost";
+import swal from 'sweetalert';
 
 const page = () => {
-  const { data: posts, isLoading } = useFetchPosts();
+  const { data: posts, isLoading: postsIsLoading, refetch: refetchPosts } = useFetchPosts();
+
+  const toastSuccess = () => {
+    swal({
+      title: "Success",
+      text: "Post created successfully",
+      icon: "success",
+      button: "OK",
+      timer: 3000
+    });
+  };
+
+  const toastError = () => {
+    swal({
+      title: "Error",
+      text: "Something went wrong",
+      icon: "error",
+      button: "OK",
+      timer: 3000
+    });
+  }
 
   const formik = useFormik({
     initialValues: {
@@ -23,27 +43,28 @@ const page = () => {
     },
 
     onSubmit: async () => {
-      createPost();
-      // formik.setFieldValue("title", "");
-      // formik.setFieldValue("body", "");
-      // formik.setFieldValue("author", "");
-      // formik.setFieldValue("image", "");
+      const { title, body, author, image } = formik.values;
+
+      createPost({
+        title, body, author, image
+      });
+
+      formik.setFieldValue("title", "");
+      formik.setFieldValue("body", "");
+      formik.setFieldValue("author", "");
+      formik.setFieldValue("image", "");
     },
   });
 
-  const { mutate: createPost } = useMutation({
-    mutationFn: async () => {
-      const { title, body, author, image } = formik.values;
-
-      const postsResponse = await axiosInstance.post("/posts", {
-        title,
-        body,
-        author,
-        image,
-      });
-
-      return postsResponse;
+  const { mutate: createPost, isLoading: createPostIsLoading } = useCreatePost({
+    onSuccess: () => {
+      toastSuccess();
+      refetchPosts();
     },
+
+    onError: () => {
+      toastError();
+    }
   });
 
   const handleFormInput = (e) => {
@@ -96,13 +117,13 @@ const page = () => {
 
   return (
     <>
-      <div className="justify-center mx-auto p-4">
+      <div className="justify-center mx-auto pt-14 pb-4">
         <h1 className="text-3xl font-bold font-poppins text-center text-black">
-          Post List
+          POST LIST
         </h1>
       </div>
 
-      <div className="relative overflow-hidden mx-4 p-4 min-h-screen h-screen">
+      <div className="relative mx-4 px-16">
         <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
           <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
@@ -125,10 +146,10 @@ const page = () => {
           </thead>
           <tbody>
             {renderPosts()}
-            {isLoading && loading()}
+            {postsIsLoading && loading()}
           </tbody>
         </table>
-        <div className="p-6 text-gray-900 dark:text-gray-100">
+        <div className="pt-6 pb-14 text-gray-900 dark:text-gray-100">
           <h3 className="mx-auto py-8 text-center text-2xl font-bold text-black">
             Tambahkan Postingan Baru
           </h3>
@@ -141,6 +162,7 @@ const page = () => {
                 id="title"
                 name="title"
                 className="mt-1 block w-full"
+                value={formik.values.title}
                 autoComplete="title"
                 required
               />
@@ -155,6 +177,7 @@ const page = () => {
                 id="body"
                 name="body"
                 className="mt-1 block w-full"
+                value={formik.values.body}
                 autoComplete="body"
                 required
               />
@@ -169,6 +192,7 @@ const page = () => {
                 id="author"
                 name="author"
                 className="mt-1 block w-full"
+                value={formik.values.author}
                 autoComplete="author"
                 required
               />
@@ -185,6 +209,7 @@ const page = () => {
                   onChange={handleFormInput}
                   id="image"
                   name="image"
+                  value={formik.values.image}
                   type="file"
                   accept="image/*"
                   multiple
@@ -192,12 +217,16 @@ const page = () => {
                 />
               </div>
               <div className="sm:w-1/2">
-                <PrimaryButton
-                  type="submit"
-                  className="mx-auto mini:absolute mini:bottom-0 mini:right-0 my-2 h-12 max-h-12 w-full items-end justify-center px-6 text-center sm:max-w-32"
-                >
-                  Send
-                </PrimaryButton>
+                {createPostIsLoading ? (
+                  <span className="loading loading-spinner loading-lg"></span>
+                ) : (
+                  <PrimaryButton
+                    type="submit"
+                    className="mx-auto mini:absolute mini:bottom-0 mini:right-0 my-2 h-12 max-h-12 w-full items-end justify-center px-6 text-center sm:max-w-32"
+                  >
+                    Send
+                  </PrimaryButton>
+                )}
               </div>
             </div>
           </form>
