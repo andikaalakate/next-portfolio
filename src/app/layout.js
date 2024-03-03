@@ -1,7 +1,9 @@
 "use client";
 
+import { Suspense } from "react";
 import "./globals.css";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import Loading from "./loading";
 
 const queryClient = new QueryClient();
 
@@ -43,7 +45,9 @@ export default function RootLayout({ children }) {
           />
         </head>
         <body className="font-poppins bg-slate-50 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-200">
-          {children}
+          <Suspense fallback={<Loading />}>
+            {children}
+          </Suspense>
         </body>
       </html>
     </QueryClientProvider>
