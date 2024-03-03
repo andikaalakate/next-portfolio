@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import Header from "@/components/Header";
-import AOS from "aos";
+import AOS from "aos/dist/aos.js";
 import "aos/dist/aos.css";
 import "animate.css";
 import Home from "@/components/Home";

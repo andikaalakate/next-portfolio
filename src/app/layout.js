@@ -11,6 +11,11 @@ export default function RootLayout({ children }) {
       <html lang="en" className="scroll-smooth">
         <head>
           <title>Portfolio - Andika Alakate</title>
+          <meta
+            property="og:title"
+            content="Portfolio - Andika Alakate"
+            key="title"
+          />
           <meta name="description" content="Dibuat menggunakan NextJS" />
           <meta charSet="UTF-8" />
           <meta

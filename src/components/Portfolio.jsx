@@ -106,7 +106,7 @@ const Portfolio = () => {
                     />
                   </a>
                 </div>
-                <h3 className="font-semibold text-xl mt-5 mb-3">
+                <h3 className="font-semibold text-xl mt-5 mb-3 text-dark">
                   {item.title}
                 </h3>
                 <p className="font-medium text-base text-dark_sec">

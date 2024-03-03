@@ -105,7 +105,7 @@ const Skills = () => {
                   />
                 </div>
                 <div className="w-full py-8 px-6">
-                  <h3 className="font-semibold text-xl mb-3">{skill.title}</h3>
+                  <h3 className="font-semibold text-xl mb-3 text-dark">{skill.title}</h3>
                   <p className="font-medium text-base text-dark_sec pb-4">
                     {skill.description}
                   </p>
