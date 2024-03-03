@@ -13,6 +13,7 @@ module.exports = {
     container: {
       center: true,
       padding: "1rem",
+      margin: "0rem 0rem",
     },
     extend: {
       animation: {
@@ -48,7 +49,7 @@ module.exports = {
   },
   plugins: [scrollbar({ nocompatible: true }), require("daisyui")],
   daisyui: {
-    themes: 'light', // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]
+    themes: "light", // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]
     darkTheme: "dark", // name of one of the included themes for dark mode
     base: true, // applies background color and foreground color for root element by default
     styled: true, // include daisyUI colors and design decisions for all components

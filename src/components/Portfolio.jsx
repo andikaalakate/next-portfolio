@@ -72,7 +72,7 @@ const Portfolio = () => {
           data-aos="fade-up"
           data-aos-anchor-placement="top-center"
         >
-          <div className="w-full px-4 pb-4">
+          <div className="w-full pb-4">
             <div className="max-w-xl mx-auto text-center pt-8">
               <h4 className="font-semibold text-lg text-primary mb-2">
                 Portfolio
@@ -88,7 +88,7 @@ const Portfolio = () => {
             </div>
           </div>
 
-          <div className="w-full px-4 flex flex-wrap justify-center">
+          <div className="w-full py-4 flex flex-wrap justify-center">
             {portfolioItems.map((item, index) => (
               <div
                 key={index}

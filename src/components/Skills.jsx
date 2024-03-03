@@ -76,7 +76,7 @@ const Skills = () => {
           data-aos="fade-up"
           data-aos-anchor-placement="top-center"
         >
-          <div className="max-w-xl mx-auto text-center pt-10 px-4">
+          <div className="max-w-xl mx-auto text-center pt-10">
             <h4 className="font-bold uppercase text-primary text-lg mb-3 text-center">
               Kemampuan
             </h4>
@@ -88,7 +88,7 @@ const Skills = () => {
               Berikut adalah beberapa diantaranya:
             </p>
           </div>
-          <div className="flex p-4 flex-wrap mx-auto flex-1 gap-6 justify-center">
+          <div className="flex py-4 flex-wrap mx-auto flex-1 gap-6 justify-center">
             {skillsData.map((skill, index) => (
               <div
                 key={index}

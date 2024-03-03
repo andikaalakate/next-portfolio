@@ -40,7 +40,7 @@ const Blogs = () => {
           data-aos="fade-up"
           data-aos-anchor-placement="top-center"
         >
-          <div className="w-full px-4 pb-4">
+          <div className="w-full pb-4">
             <div className="max-w-xl mx-auto text-center pt-8">
               <h4 className="font-semibold text-lg text-primary mb-2">Blog</h4>
               <h2 className="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl">
@@ -54,7 +54,7 @@ const Blogs = () => {
             </div>
           </div>
 
-          <div className="flex p-4 flex-wrap mx-auto flex-1 gap-6 justify-center">
+          <div className="flex py-4 flex-wrap mx-auto flex-1 gap-6 justify-center">
             {blogsData.map((blog, index) => (
               <div
                 key={index}
