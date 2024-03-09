@@ -78,6 +78,14 @@ const Header = () => {
                   </li>
                   <li className="group">
                     <Link
+                      href="#timeline"
+                      className="text-base text-dark py-2 mx-8 flex group-hover:text-primary transition-all duration-500"
+                    >
+                      Timeline
+                    </Link>
+                  </li>
+                  <li className="group">
+                    <Link
                       href="#skills"
                       className="text-base text-dark py-2 mx-8 flex group-hover:text-primary transition-all duration-500"
                     >
@@ -92,22 +100,14 @@ const Header = () => {
                       Portfolio
                     </Link>
                   </li>
-                  <li className="group">
-                    <Link
-                      href="#clients"
-                      className="text-base text-dark py-2 mx-8 flex group-hover:text-primary transition-all duration-500"
-                    >
-                      Klien
-                    </Link>
-                  </li>
-                  <li className="group">
+                  {/* <li className="group">
                     <Link
                       href="#blog"
                       className="text-base text-dark py-2 mx-8 flex group-hover:text-primary transition-all duration-500"
                     >
                       Blog
                     </Link>
-                  </li>
+                  </li> */}
                   <li className="group">
                     <Link
                       href="#contact"

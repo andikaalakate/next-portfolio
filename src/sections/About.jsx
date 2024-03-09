@@ -31,30 +31,35 @@ const About = () => {
               <div className="flex items-center">
                 <Link
                   href="https://linkedin.com/in/andika-alakate/"
+                  target="_blank"
                   className="w-9 h-9 mr-3 transition-all duration-500 text-slate-300 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white"
                 >
                   <i className="fa fa-linkedin-square" aria-hidden="true"></i>
                 </Link>
                 <Link
                   href="https://github.com/andikaalakate/"
+                  target="_blank"
                   className="w-9 h-9 mr-3 transition-all duration-500 text-slate-300 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white"
                 >
                   <i className="fa fa-github" aria-hidden="true"></i>
                 </Link>
                 <Link
                   href="https://www.youtube.com/@andikaalakate/"
+                  target="_blank"
                   className="w-9 h-9 mr-3 transition-all duration-500 text-slate-300 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white"
                 >
                   <i className="fa fa-youtube-play" aria-hidden="true"></i>
                 </Link>
                 <Link
                   href="https://www.instagram.com/andika46710_/"
+                  target="_blank"
                   className="w-9 h-9 mr-3 transition-all duration-500 text-slate-300 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white"
                 >
                   <i className="fa fa-instagram" aria-hidden="true"></i>
                 </Link>
                 <Link
                   href="hhttps://twitter.com/Andika46710_/"
+                  target="_blank"
                   className="w-9 h-9 mr-3 transition-all duration-500 text-slate-300 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white"
                 >
                   <i className="fa fa-twitter" aria-hidden="true"></i>

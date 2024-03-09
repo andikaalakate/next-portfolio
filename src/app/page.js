@@ -1,18 +1,19 @@
 "use client";
 
 import { useEffect } from "react";
-import Header from "@/components/Header";
 import AOS from "aos/dist/aos.js";
 import "aos/dist/aos.css";
 import "animate.css";
-import Home from "@/components/Home";
-import About from "@/components/About";
-import Skills from "@/components/Skills";
-import Portfolio from "@/components/Portfolio";
-import Clients from "@/components/Clients";
-import Blogs from "@/components/Blogs";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
+import Header from "@/sections/Header";
+import Home from "@/sections/Home";
+import About from "@/sections/About";
+import Skills from "@/sections/Skills";
+import Portfolio from "@/sections/Portfolio";
+// import Clients from "@/components/Clients";
+// import Blogs from "@/sections/Blogs";
+import Contact from "@/sections/Contact";
+import Footer from "@/sections/Footer";
+import TimeLine from "@/sections/TimeLine";
 
 const page = () => {
   useEffect(() => {
@@ -23,10 +24,11 @@ const page = () => {
       <Header />
       <Home />
       <About />
+      <TimeLine />
       <Skills />
       <Portfolio />
-      <Clients />
-      <Blogs />
+      {/* <Clients /> */}
+      {/* <Blogs /> */}
       <Contact />
       <Footer />
     </>

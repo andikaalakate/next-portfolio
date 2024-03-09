@@ -65,6 +65,13 @@ const Portfolio = () => {
         "Sebuah Landing Page Product / Service Promotion.",
       link: "https://andikaalakate.github.io/an-production",
     },
+    {
+      title: "e-Presensi",
+      image: "./img/portfolio/e-Presensi.png",
+      description:
+        "Website Presensi SMK Swasta Jambi Medan, menggunakan teknologi Laravel",
+      link: "https://e-presensi.smkjambimedan.sch.id",
+    }
   ];
   return (
     <>

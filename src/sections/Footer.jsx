@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -11,7 +11,15 @@ const Footer = () => {
               <h3 className="font-bold text-2xl text-white mb-2">
                 Hubungi Saya
               </h3>
-              <p className="text-slate-300">andikaalakate@gmail.com</p>
+              <p className="text-slate-300">
+                <Link
+                  href="https://mail.google.com/mail/?view=cm&to=andikaalakate@gmail.com"
+                  className="hover:underline transition-all duration-500"
+                  target="_blank"
+                >
+                  andikaalakate@gmail.com
+                </Link>
+              </p>
               <p className="text-slate-300">Medan Tembung</p>
               <p className="text-slate-300">Sumatera Utara, Indonesia</p>
             </div>
@@ -36,28 +44,28 @@ const Footer = () => {
                 </li>
                 <li className="inline-block mr-4">
                   <Link
+                    href="#timeline"
+                    className="inline-block text-base hover:text-primary transition-all duration-500 mb-3 text-slate-300"
+                  >
+                    Timeline
+                  </Link>
+                </li>
+                <li className="inline-block mr-4">
+                  <Link
                     href="#skills"
                     className="inline-block text-base hover:text-primary transition-all duration-500 mb-3 text-slate-300"
                   >
                     Kemampuan
                   </Link>
                 </li>
-                <li className="inline-block mr-4">
-                  <Link
-                    href="#clients"
-                    className="inline-block text-base hover:text-primary transition-all duration-500 mb-3 text-slate-300"
-                  >
-                    Klien
-                  </Link>
-                </li>
-                <li className="inline-block mr-4">
+                {/* <li className="inline-block mr-4">
                   <Link
                     href="#blog"
                     className="inline-block text-base hover:text-primary transition-all duration-500 mb-3 text-slate-300"
                   >
                     Blog
                   </Link>
-                </li>
+                </li> */}
                 <li className="inline-block mr-4">
                   <Link
                     href="#contact"
