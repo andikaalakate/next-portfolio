@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 const Portfolio = () => {
   const portfolioItems = [
     {
@@ -97,14 +99,14 @@ const Portfolio = () => {
                 data-aos-anchor-placement="top-center"
               >
                 <div className="rounded-md shadow-md overflow-hidden hover:scale-95 transition-all duration-500 hover:border-primary hover:shadow-xl">
-                  <a href={item.link}>
+                  <Link href={item.link}>
                     <img
                       src={item.image}
                       alt={item.title}
                       width="w-full"
                       className="object-cover hover:scale-110 transition-all duration-500"
                     />
-                  </a>
+                  </Link>
                 </div>
                 <h3 className="font-semibold text-xl mt-5 mb-3 text-dark">
                   {item.title}

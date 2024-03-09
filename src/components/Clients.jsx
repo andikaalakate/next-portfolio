@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 const Clients = () => {
   return (
     <>
@@ -23,7 +25,7 @@ const Clients = () => {
 
           <div className="w-full px-4 pb-8">
             <div className="flex flex-wrap items-center justify-center">
-              <a href="" className="flex items-center">
+              <Link href="" className="flex items-center">
                 <img
                   src="./img/gadak-studio.webp"
                   className="rounded-full w-10 h-10"
@@ -32,7 +34,7 @@ const Clients = () => {
                 <span className="ml-4 font-bold text-slate-200 text-lg">
                   GADAK STUDIO
                 </span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

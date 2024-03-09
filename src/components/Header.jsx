@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Link from 'next/link'
 
 const Header = () => {
   const [isNavbarFixed, setIsNavbarFixed] = useState(false);
@@ -36,9 +37,9 @@ const Header = () => {
         <div className="container px-4">
           <div className="flex items-center justify-between relative">
             <div className="px-4 animate__animated animate__slideInLeft">
-              <a href="#home" className="font-bold text-lg text-primary block py-5">
+              <Link href="#home" className="font-bold text-lg text-primary block py-5">
                 Andika Alakate
-              </a>
+              </Link>
             </div>
             <div className="flex items-center px-4">
               <button
@@ -60,60 +61,60 @@ const Header = () => {
               >
                 <ul className="block lg:flex">
                   <li className="group">
-                    <a
+                    <Link
                       href="#home"
                       className="text-base text-dark py-2 mx-8 flex group-hover:text-primary transition-all duration-500"
                     >
                       Beranda
-                    </a>
+                    </Link>
                   </li>
                   <li className="group">
-                    <a
+                    <Link
                       href="#about"
                       className="text-base text-dark py-2 mx-8 flex group-hover:text-primary transition-all duration-500"
                     >
                       Tentang
-                    </a>
+                    </Link>
                   </li>
                   <li className="group">
-                    <a
+                    <Link
                       href="#skills"
                       className="text-base text-dark py-2 mx-8 flex group-hover:text-primary transition-all duration-500"
                     >
                       Kemampuan
-                    </a>
+                    </Link>
                   </li>
                   <li className="group">
-                    <a
+                    <Link
                       href="#portfolio"
                       className="text-base text-dark py-2 mx-8 flex group-hover:text-primary transition-all duration-500"
                     >
                       Portfolio
-                    </a>
+                    </Link>
                   </li>
                   <li className="group">
-                    <a
+                    <Link
                       href="#clients"
                       className="text-base text-dark py-2 mx-8 flex group-hover:text-primary transition-all duration-500"
                     >
                       Klien
-                    </a>
+                    </Link>
                   </li>
                   <li className="group">
-                    <a
+                    <Link
                       href="#blog"
                       className="text-base text-dark py-2 mx-8 flex group-hover:text-primary transition-all duration-500"
                     >
                       Blog
-                    </a>
+                    </Link>
                   </li>
                   <li className="group">
-                    <a
+                    <Link
                       href="#contact"
                       className="text-base text-dark py-2 mx-8 flex group-hover:text-primary transition-all duration-500"
                     >
                       Kontak
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </nav>

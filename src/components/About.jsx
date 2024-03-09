@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 const About = () => {
   return (
     <>
@@ -27,36 +29,36 @@ const About = () => {
                 mencapai kesuksesan bersama!
               </p>
               <div className="flex items-center">
-                <a
+                <Link
                   href="https://linkedin.com/in/andika-alakate/"
                   className="w-9 h-9 mr-3 transition-all duration-500 text-slate-300 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white"
                 >
                   <i className="fa fa-linkedin-square" aria-hidden="true"></i>
-                </a>
-                <a
+                </Link>
+                <Link
                   href="https://github.com/andikaalakate/"
                   className="w-9 h-9 mr-3 transition-all duration-500 text-slate-300 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white"
                 >
                   <i className="fa fa-github" aria-hidden="true"></i>
-                </a>
-                <a
+                </Link>
+                <Link
                   href="https://www.youtube.com/@andikaalakate/"
                   className="w-9 h-9 mr-3 transition-all duration-500 text-slate-300 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white"
                 >
                   <i className="fa fa-youtube-play" aria-hidden="true"></i>
-                </a>
-                <a
+                </Link>
+                <Link
                   href="https://www.instagram.com/andika46710_/"
                   className="w-9 h-9 mr-3 transition-all duration-500 text-slate-300 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white"
                 >
                   <i className="fa fa-instagram" aria-hidden="true"></i>
-                </a>
-                <a
+                </Link>
+                <Link
                   href="hhttps://twitter.com/Andika46710_/"
                   className="w-9 h-9 mr-3 transition-all duration-500 text-slate-300 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white"
                 >
                   <i className="fa fa-twitter" aria-hidden="true"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

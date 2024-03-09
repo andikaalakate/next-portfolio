@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { Typewriter } from "react-simple-typewriter";
+import Link from 'next/link'
 
 const Home = () => {
   const animatedTextRef = useRef(null);
@@ -78,12 +79,12 @@ const Home = () => {
                 result in glory.
               </p>
 
-              <a
+              <Link
                 href="#contact"
                 className="text-sm font-semibold text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:opacity-75 transition-all duration-500 ease-in-out mini:py-2 mini:px-5 self-start"
               >
                 Hubungi Saya
-              </a>
+              </Link>
             </div>
 
             <div className="w-full self-center px-2 sm:w-1/2 hp:w-full sm:block mini:hidden">

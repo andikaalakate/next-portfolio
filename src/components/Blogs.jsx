@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 const Blogs = () => {
   const blogsData = [
     {
@@ -76,12 +78,11 @@ const Blogs = () => {
                     {blog.description}
                   </p>
                   <div className="absolute bottom-4 right-4">
-                    <a
-                      href="#"
+                    <Link                      href="#"
                       className="text-sm font-semibold text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:opacity-75 transition-all duration-500 ease-in-out mini:py-2 mini:px-5 self-start hover:underline"
                     >
                       Baca Selengkapnya ...
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
