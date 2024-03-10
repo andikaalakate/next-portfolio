@@ -101,6 +101,7 @@ const Skills = () => {
                   <img
                     src={skill.image}
                     alt={skill.title}
+                    loading="lazy"
                     className="w-full lg:h-48 object-cover"
                   />
                 </div>

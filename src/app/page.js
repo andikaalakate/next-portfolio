@@ -14,6 +14,7 @@ import Portfolio from "@/sections/Portfolio";
 import Contact from "@/sections/Contact";
 import Footer from "@/sections/Footer";
 import TimeLine from "@/sections/TimeLine";
+// import ChatBot from "@/sections/ChatBot";
 
 const page = () => {
   useEffect(() => {
@@ -29,6 +30,7 @@ const page = () => {
       <Portfolio />
       {/* <Clients /> */}
       {/* <Blogs /> */}
+      {/* <ChatBot /> */}
       <Contact />
       <Footer />
     </>

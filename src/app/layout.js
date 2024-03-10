@@ -45,9 +45,7 @@ export default function RootLayout({ children }) {
           />
         </head>
         <body className="font-poppins bg-slate-50 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-200">
-          <Suspense fallback={<Loading />}>
-            {children}
-          </Suspense>
+          <Suspense fallback={<Loading />}>{children}</Suspense>
         </body>
       </html>
     </QueryClientProvider>

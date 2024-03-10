@@ -34,6 +34,7 @@ const Home = () => {
                 <img
                   src="./img/andika-alakate-3.webp"
                   alt="Andika Alakate"
+                  loading="lazy"
                   className="max-w-full rounded-3xl mx-auto drop-shadow-xl lg:max-w-sm xl:-right-24 relative animate__animated animate__backInLeft"
                 />
               </div>
@@ -92,6 +93,7 @@ const Home = () => {
                 <img
                   src="./img/andika-alakate-3.webp"
                   alt="Andika Alakate"
+                  loading="lazy"
                   className="max-w-full rounded-3xl mx-auto drop-shadow-xl lg:max-w-sm xl:-right-24 relative animate__animated animate__backInLeft"
                 />
               </div>

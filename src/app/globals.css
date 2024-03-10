@@ -73,3 +73,29 @@ html {
   @apply fixed z-[9999] bg-white bg-opacity-70 backdrop-blur-sm;
   box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.2);
 }
+
+.slide-in {
+  animation: slideIn 0.3s forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.slide-out {
+  animation: slideOut 0.3s forwards;
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(150%);
+  }
+}

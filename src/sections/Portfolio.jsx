@@ -111,6 +111,7 @@ const Portfolio = () => {
                       src={item.image}
                       alt={item.title}
                       width="w-full"
+                      loading='lazy'
                       className="object-cover hover:scale-110 transition-all duration-500"
                     />
                   </Link>
