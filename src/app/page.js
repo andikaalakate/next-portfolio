@@ -25,7 +25,7 @@ const page = () => {
       <Header />
       <Home />
       <About />
-      <TimeLine />
+      {/* <TimeLine /> */}
       <Skills />
       <Portfolio />
       {/* <Clients /> */}
